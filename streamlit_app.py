@@ -19,7 +19,7 @@ transform = transforms.Compose([
 # Load mô hình YOLO và Xception
 model_detect = YOLO('best.pt')
 model_classify = timm.create_model('xception', pretrained=False, num_classes=4)
-state_dict = torch.load('xception1.pth', map_location='cpu')
+state_dict = torch.load('xception-best.pth', map_location='cpu')
 
 # Xử lý state_dict
 new_state_dict = OrderedDict()
